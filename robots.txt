@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /polls.db
+Disallow: /functions.php
+Disallow: /answer.php
+Disallow: /poll.php
