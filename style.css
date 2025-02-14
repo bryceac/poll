@@ -1,0 +1,46 @@
+/*
+set color scheme to appropriate vale, so that colors get applied correctly.
+*/
+:root {
+    color-scheme: light dark;
+}
+
+/*
+make sure design scales with screen.
+*/
+viewport {
+    zoom: 1.0;
+    width: device-width;
+}
+
+body {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: light-dark(#c0c0c0, #000000);
+    color: light-dark(#000000, #ffffff);
+}
+    
+h1, h2, h3, h4, h5, h6 {
+    font-size: 2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+    
+#poll {
+    display:flexbox;
+    align-items: center;
+    margin-left: auto;
+    padding-left: auto;
+    margin-right: auto;
+    padding-right: auto;
+    border-radius: 5px;
+    background-color: light-dark(#ffffff, #3f3f3f);
+    color: light-dark(#000000, #ffffff);
+}
+    
+#poll .response {
+    display:flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
