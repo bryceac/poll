@@ -37,3 +37,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: light-dark(#ffffff, #3f3f3f);
     color: light-dark(#000000, #ffffff);
 }
+
+#question, #answers {
+    width: 95%;
+}
