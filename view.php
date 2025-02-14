@@ -9,6 +9,7 @@
     <meta http-equiv="refresh" content="600">
 </head>
 <body>
+    <?php if (isset($current_poll)) { ?>
     <h1><?php echo htmlspecialchars($current_poll->question); ?></h1>
 
     <div id="poll">
@@ -27,5 +28,8 @@
             <?php } ?>
         <?php } ?>
     </div>
+    <?php } else { ?>
+        <p>Sorry, There are no polls to display at this time.</p>
+    <?php } ?>
 </body>
 </html>
