@@ -1,6 +1,6 @@
 <?php include("functions.php"); ?>
 <?php $polls = retrieve_polls(); ?>
-<?php $current_poll = $polls[count($polls) -1]; ?>
+<?php $current_poll = empty(polls) ? NULL : $polls[count($polls) -1]; ?>
 <!DOCTYPE html>
 <html>
 <head>
