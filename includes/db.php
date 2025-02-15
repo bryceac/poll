@@ -39,7 +39,7 @@ class DB {
         foreach ($conn->query($query) as $row) {
             $poll = new Poll($row);
     
-            $poll->answers = retrieve_answers_for_poll($poll->id);
+            $poll->answers = $this->retrieve_answers_for_poll($poll->id);
     
             $polls[] = $poll;
         }
@@ -50,7 +50,7 @@ class DB {
     function current_poll() {
         $poll = null;
     
-        $polls = retrieve_polls();
+        $polls = $this->retrieve_polls();
     
         if (!empty($polls)) {
             $poll = $polls[count($polls) -1];
@@ -60,7 +60,7 @@ class DB {
     }
     
     function retrieve_poll_with_id($id) {
-        $polls = retrieve_polls();
+        $polls = $this->retrieve_polls();
     
         $poll = null;
     
@@ -76,8 +76,8 @@ class DB {
     
     function add_answer_to_store($answer) {
         $conn = $this->connect();
-        $polls = retrieve_polls();
-        $latest_poll = current_poll();
+        $polls = $this->retrieve_polls();
+        $latest_poll = $this->urrent_poll();
     
         $query = "insert into answers (poll_id, answer, votes) values (?, ?, ?)";
         $statement = $conn->prepare($query);
@@ -96,7 +96,7 @@ class DB {
         $statement->execute([$poll->question]);
     
         foreach($poll->answers as $answer) {
-            add_answer_to_store($answer);
+            $this->add_answer_to_store($answer);
         }
     }
     
