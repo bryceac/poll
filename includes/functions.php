@@ -56,7 +56,7 @@ function current_poll() {
 function add_answer_to_store($answer) {
     $conn = new PDO($host_file);
     $polls = retrieve_polls();
-    $latest_poll = $polls[count($polls)-1];
+    $latest_poll = current_poll();
 
     $query = "insert into answers (poll_id, answer, votes)";
     $statement = $conn->prepare($query);
