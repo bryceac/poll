@@ -5,7 +5,7 @@
 <head>
     <title><?php echo htmlspecialchars($current_poll->question); ?></title>
     <link rel="stylesheet" href="assets/style.css" media="all">
-    <meta http-equiv="refresh" content="600">
+    <meta http-equiv="refresh" content="5">
 </head>
 <body>
     <?php if (isset($current_poll)) { ?>
