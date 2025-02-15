@@ -28,7 +28,29 @@ Also, because this application uses SQLite, be sure your server has the PDO driv
 Download the archive or clone the repo to where your server looks for files.
 
 As long as the location has PHP enabled, 
-the PDO SQLite module is enabled, 
+the PDO SQLite module is enabled, permissions are properly set,
 and the DirectoryIndex is set for both <strong>index.html</strong> and
 <strong>index.php</strong>, things should operate just fine.
+
+===Questions===
+
+<ol>
+<li>
+<dl>
+<dt style="font-weight:bold">Why create this when there are already plenty of other options?</dt>
+<dd>
+<p>While there are many different polling options, especially for streaming, such as 
+<a href="https://www.livereacting.com/poll-in-live-stream">LiveReacting</a>, 
+many of them cost money or were more suited to engagement on websites than what I needed.</p>
+<p>Plus, I thought it would be nice to challenge myself 
+at creating a polling system for that can just be linked up 
+to bots that are already part of streams, such as Nightbot.</p>
+</dd>
+</dl>
+</li>
+</ol>
+
+===Creating Polls===
+
+To create a poll, visit the place where
 
