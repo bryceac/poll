@@ -16,3 +16,19 @@
 <dt style="font-weight:bold">License</dt>
 <dd><p>See LICENSE</p></dd>
 </dl>
+
+==Notes==
+
+This application has been tested on PHP 8.4.3 and <strong>should</strong> on later.
+
+Also, because this application uses SQLite, be sure your server has the PDO drivers for SQLite.
+
+===Installation===
+
+Download the archive or clone the repo to where your server looks for files.
+
+As long as the location has PHP enabled, 
+the PDO SQLite module is enabled, 
+and the DirectoryIndex is set for both <strong>index.html</strong> and
+<strong>index.php</strong>, things should operate just fine.
+
