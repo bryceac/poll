@@ -36,4 +36,19 @@ function retrieve_polls() {
     
     return $polls;
 }
-?>
+
+function add_poll_to_store($poll) {
+    $conn = new PDO($host_file);
+
+    $query = "insert into polls (question) values (?)";
+
+    $statement = $conn->prepare($query);
+
+    $statement->execute([$poll->question]);
+
+    $conn = null;
+}
+
+function add_answer_to_store($answer) {
+    $conn = new PDO($host_file);
+}
