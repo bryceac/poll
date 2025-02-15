@@ -5,6 +5,7 @@ include("answer.php");
 $db = realpath("../assets/polls.db");
 
 function retrieve_answers_for_poll($poll_id) {
+    global $db;
     $answers = [];
 
     $conn = new PDO("sqlite:$db");
@@ -25,6 +26,7 @@ function retrieve_answers_for_poll($poll_id) {
 }
 
 function retrieve_polls() {
+    global $db;
     $polls = [];
     
     $conn = new PDO("sqlite:$db");
@@ -69,6 +71,7 @@ function retrieve_poll_with_id($id) {
 }
 
 function add_answer_to_store($answer) {
+    global $db;
     $conn = new PDO("sqlite:$db");
     $polls = retrieve_polls();
     $latest_poll = current_poll();
@@ -81,6 +84,7 @@ function add_answer_to_store($answer) {
 }
 
 function add_poll_to_store($poll) {
+    global $db;
     $conn = new PDO("sqlite:$db");
 
     $query = "insert into polls (question) values (?)";
@@ -97,6 +101,7 @@ function add_poll_to_store($poll) {
 }
 
 function update_vote_in_database($answer) {
+    global $db;
     $conn = new PDO("sqlite:$db");
     $query = "update answers set votes = ? WHERE id = ?";
 
