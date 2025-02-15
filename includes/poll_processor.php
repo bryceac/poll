@@ -28,5 +28,5 @@ $poll->answers = answers_from($options);
 
 $db->add_poll_to_store($poll);
 
-echo("Poll created successfully.")
+echo("Poll created successfully.");
 ?>
