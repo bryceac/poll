@@ -77,7 +77,7 @@ class DB {
     function add_answer_to_store($answer) {
         $conn = $this->connect();
         $polls = $this->retrieve_polls();
-        $latest_poll = $this->urrent_poll();
+        $latest_poll = $this->current_poll();
     
         $query = "insert into answers (poll_id, answer, votes) values (?, ?, ?)";
         $statement = $conn->prepare($query);
