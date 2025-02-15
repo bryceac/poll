@@ -108,3 +108,24 @@ the poll, so that users can see what their options are.
 However, as I have yet to do testing with bots, 
 I do not know they will handle the given format.
 
+The votes cast will be checked against available response 
+and will only be accepted if it is valid.
+
+The votes themselves are case insensitive.
+
+===Contributing===
+
+If you would like to help make things better, 
+such as closing polls, feel free to fork this repo and do so.
+
+Please be aware that I can reject the pull request for any reason, 
+though I try to be chill with things.
+
+===Support===
+
+While this is my second PHP project, 
+after the <a href="https://github.com/bryceac/Question-of-the-Day">question of the day</a>,
+I still don't think I am that well experienced with PHP, 
+but I will try to help you the best that I can. Just shoot me an email at the following:
+
+tonyhawk2100@gmail.com
