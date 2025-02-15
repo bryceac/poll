@@ -1,4 +1,4 @@
-<?php include("functions.php"); ?>
+<?php include("includes/functions.php"); ?>
 <?php $polls = retrieve_polls(); ?>
 <?php $current_poll = empty(polls) ? NULL : $polls[count($polls) -1]; ?>
 <!DOCTYPE html>
