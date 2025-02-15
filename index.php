@@ -19,8 +19,8 @@ $db = new DB();
             <?php if ($current_poll->total_votes() > 0) { ?>
                 <?php foreach($current_poll->answers as $answer) { ?>
                     <div class="response">
-                        <label for="<?php echo $answer->id; ?>"><?php echo htmlspecialchars($answer->value); ?></label>
-                        <meter value="<?php echo $answer->votes; ?>" min="0" max="<?php echo $current_poll->total_votes ?>"></meter>
+                        <label for="<?php echo $answer->id; ?>"><?php echo htmlspecialchars($answer->value); ?> </label>
+                        <meter value="<?php echo $answer->votes; ?>" min="0" max="<?php echo $current_poll->total_votes(); ?>"></meter>
                     </div>
                 <?php } ?>
             <?php } else { ?>
