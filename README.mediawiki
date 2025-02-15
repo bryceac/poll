@@ -74,6 +74,22 @@ difficult.</p>
 </dd>
 </dl>
 </li>
+<li>
+<dl>
+<dt style="font-weight:bold">Can I share my instance with friends?</dt>
+<dd>
+<p>You can, but that would be a bad idea.</p>
+<p>This application was created with the intent that a single user would
+be using it on each instance.</p>
+<p>While this does have some possible security risks, 
+hence the reason it is not recommended to share instances, 
+it was done for easy of use and convenience.</p>
+<p>To help with security, 
+be sure to exclude the location you install these script 
+from being accessible by bots.</p>
+</dd>
+</dl>
+</li>
 </ol>
 
 ===Creating Polls===
