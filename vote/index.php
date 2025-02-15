@@ -1,9 +1,11 @@
 <?php
-include("../includes/functions.php");
+include("../includes/db.php");
+
+$db = new DB();
 
 $vote = $_GET["choice"];
 
-$current_poll = current_poll();
+$current_poll = $db->current_poll();
 
 $stored_answer = NULL;
 
@@ -18,7 +20,7 @@ if (isset($current_poll)) {
     if (isset($stored_answer)) {
         $stored_answer->votes += 1;
 
-        update_vote_in_database($stored_answer);
+        $db->update_vote_in_database($stored_answer);
 
         echo("Thanks for voting!");
     } else {

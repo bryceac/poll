@@ -1,5 +1,7 @@
 <?php
-include("functions.php");
+include("db.php");
+
+$db = new DB();
 
 $question = $_POST["question"];
 $options = $_POST["answers"];
@@ -24,7 +26,7 @@ function answers_from($input) {
 $poll->question = $question;
 $poll->answers = answers_from($options);
 
-add_poll_to_store($poll);
+$db->add_poll_to_store($poll);
 
 echo("Poll created successfully.")
 ?>
