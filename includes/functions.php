@@ -2,7 +2,7 @@
 include("poll.php");
 include("answer.php");
 
-$host_file = "polls.db";
+$host_file = "../assets/polls.db";
 
 function retrieve_answers_for_poll($poll_id) {
     $answers = [];
