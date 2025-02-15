@@ -1,7 +1,2 @@
 User-agent: *
-Disallow: /polls.db
-Disallow: /functions.php
-Disallow: /answer.php
-Disallow: /poll.php
-Disallow: /create.hml
-Disallow: /poll_processor.php
+Disallow: /
