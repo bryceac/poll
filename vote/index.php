@@ -1,5 +1,5 @@
 <?php
-include("../includes/db.php");
+include(dirname(__DIR__, 1) . "/includes/db.php");
 
 $db = new DB();
 
