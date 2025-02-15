@@ -26,6 +26,9 @@
                     </div>
                 <?php } ?>
             <?php } ?>
+
+            <p>To vote, type your vote in this format:</p>
+            <p>!vote <em>choice</em></p>
         </div>
     <?php } else { ?>
         <p>Sorry, There are no polls to display at this time.</p>
