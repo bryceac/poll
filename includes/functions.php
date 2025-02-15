@@ -8,9 +8,13 @@ function retrieve_answers_for_poll($poll_id) {
     $answers = [];
 
     $conn = new PDO($host_file);
-    $query = "select id, poll_id, answer, votes FROM answers WHERE poll_id = $poll_id";
+    $query = "select id, poll_id, answer, votes FROM answers WHERE poll_id = ?";
+    $statement = $conn->prepare($query);
+    $statement->execute([$poll_id]);
 
-    foreach($conn->query as $row) {
+    $results = $statement->fetchAll();
+
+    foreach($results as $row) {
         $answer = new Answer($row);
 
         $answers[] = $answer;
