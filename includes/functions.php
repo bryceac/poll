@@ -32,7 +32,7 @@ function retrieve_polls() {
     $conn = new PDO("sqlite:$db");
     $query = "select id, question FROM polls";
     foreach ($conn->query($query) as $row) {
-        $poll = Poll($row);
+        $poll = new Poll($row);
 
         $poll->answers = retrieve_answers_for_poll($poll->id);
 
