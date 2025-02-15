@@ -5,7 +5,7 @@ $question = $_POST["question"];
 $options = $_POST["answers"];
 $poll = new Poll();
 
-function answers_from($input = "") {
+function answers_from($input) {
     $answers = [];
 
     $input_array = preg_split("/\r\n|\n|\r/", $input);
