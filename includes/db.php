@@ -6,7 +6,7 @@ class DB {
     private $host = "../assets/polls.db";
 
     function connect() {
-        $db_path = realpath($host);
+        $db_path = realpath($this->host);
         $conn = new PDO("sqlite:$db_path");
 
         return $conn;
