@@ -3,10 +3,10 @@ include("answer.php");
 include("poll.php");
 
 class DB {
-    private $host = "../assets/polls.db";
+    private $host = "assets/polls.db";
 
     function connect() {
-        $db_path = realpath($this->host);
+        $db_path = dirname(__DIR__, 2) . "/$host";
         $conn = new PDO("sqlite:$db_path");
 
         return $conn;
