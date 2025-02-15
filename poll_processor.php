@@ -20,4 +20,7 @@ function answers_from($input) {
 
     return $answers;
 }
+
+$poll->question = $question;
+$poll->answers = answers_from($options);
 ?>
