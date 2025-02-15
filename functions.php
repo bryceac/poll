@@ -37,6 +37,18 @@ function retrieve_polls() {
     return $polls;
 }
 
+function add_answer_to_store($answer) {
+    $conn = new PDO($host_file);
+    $polls = retrieve_polls();
+    $latest_poll = $polls[count($polls)-1];
+
+    $query = "insert into answers (poll_id, answer, votes)";
+    $statement = $conn->prepare($query);
+
+    $statement->execute([$latest_poll->id, $answer->value, $answer->votes]);
+    $conn = null;
+}
+
 function add_poll_to_store($poll) {
     $conn = new PDO($host_file);
 
@@ -47,8 +59,8 @@ function add_poll_to_store($poll) {
     $statement->execute([$poll->question]);
 
     $conn = null;
-}
 
-function add_answer_to_store($answer) {
-    $conn = new PDO($host_file);
+    foreach($poll->answers as $answer) {
+        add_answer_to_store($answer);
+    }
 }
