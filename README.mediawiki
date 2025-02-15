@@ -48,9 +48,30 @@ to bots that are already part of streams, such as Nightbot.</p>
 </dd>
 </dl>
 </li>
+<li>
+<dl>
+<dt style="font-weight:bold">How do I add this to my stream?</dt>
+<dd>
+<p>This would depend on how you are broadcast the stream, 
+but after adding a new command 
+to the bot you use for your stream that calls the URL to cast a vote,
+make sure to add the main URL for the poll as a browser source, 
+so viewers can see it.</p>
+</dd>
+</dl>
+</li>
 </ol>
 
 ===Creating Polls===
 
-To create a poll, visit the place where
+To create a poll, you would visit an address like this:
+
+<pre>
+http://example.com/poll/create
+</pre>
+
+This will display a form, 
+where you can fill in the question or prompt and options.
+
+Each option will for the poll is to them be listed on its own line.
 
