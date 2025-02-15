@@ -15,7 +15,7 @@ class DB {
     function retrieve_answers_for_poll($poll_id) {
         $answers = [];
     
-        $conn = connect();
+        $conn = $this->connect();
         $query = "select id, poll_id, answer, votes FROM answers WHERE poll_id = ?";
         $statement = $conn->prepare($query);
         $statement->execute([$poll_id]);
@@ -34,7 +34,7 @@ class DB {
     function retrieve_polls() {
         $polls = [];
         
-        $conn = connect();
+        $conn = $this->connect();
         $query = "select id, question FROM polls";
         foreach ($conn->query($query) as $row) {
             $poll = new Poll($row);
@@ -75,7 +75,7 @@ class DB {
     }
     
     function add_answer_to_store($answer) {
-        $conn = connect();
+        $conn = $this->connect();
         $polls = retrieve_polls();
         $latest_poll = current_poll();
     
@@ -87,7 +87,7 @@ class DB {
     
     function add_poll_to_store($poll) {
         global $db;
-        $conn = connect();
+        $conn = $this->connect();
     
         $query = "insert into polls (question) values (?)";
     
@@ -101,7 +101,7 @@ class DB {
     }
     
     function update_vote_in_database($answer) {
-        $conn = connect();
+        $conn = $this->connect();
         $query = "update answers set votes = ? WHERE id = ?";
     
         $statement = $conn->prepare($query);
