@@ -15,7 +15,7 @@ class Answer {
             $this->id = $array["id"];
             $this->poll_id = $array["poll_id"];
             $this->value = $array["answer"];
-            $this->voutes = $array["votes"];
+            $this->votes = $array["votes"];
         }
     }
 }
