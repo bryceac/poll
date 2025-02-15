@@ -107,6 +107,6 @@ function update_vote_in_database($answer) {
 
     $statement = $conn->prepare($query);
 
-    $statement->execute([$answer->vote, $answer->id]);
+    $statement->execute([$answer->votes, $answer->id]);
     $conn = null;
 }
