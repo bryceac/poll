@@ -1,1 +1,18 @@
 =Poll=
+
+<dl>
+<dt style="font-weight:bold">Version</dt>
+<dd><p>1.0</p></dd>
+
+<dt style="font-weight:bold">Author</dt>
+<dd><p>Bryce Campbell</p></dd>
+
+<dt style="font-weight:bold">Copyright</dt>
+<dd><p>2025</p></dd>
+
+<dt style="font-weight:bold">Description</dt>
+<dd><p>A PHP based polling system meant for use cases where users can vote without a form, such as during livestreams.</p></dd>
+
+<dt style="font-weight:bold">License</dt>
+<dd><p>See LICENSE</p></dd>
+</dl>
