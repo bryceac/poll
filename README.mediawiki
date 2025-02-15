@@ -60,6 +60,20 @@ so viewers can see it.</p>
 </dd>
 </dl>
 </li>
+<li>
+<dl>
+<dt style="font-weight:bold">Can I have polls automatically close?</dt>
+<dd>
+<p>While I have thought of this, 
+the database structure does not support it 
+because I wanted something simple.</p>
+<p>Also, some bots, such as Nightbot, 
+have cooldown periods for commands, so taking those into account can be
+difficult.</p>
+<p>However, you are free to help implement it if you would like.</p>
+</dd>
+</dl>
+</li>
 </ol>
 
 ===Creating Polls===
