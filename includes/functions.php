@@ -41,6 +41,18 @@ function retrieve_polls() {
     return $polls;
 }
 
+function current_poll() {
+    $poll = null;
+
+    $polls = retrieve_polls();
+
+    if (!empty($polls)) {
+        $poll = $polls[count(polls) -1];
+    }
+
+    return $poll;
+}
+
 function add_answer_to_store($answer) {
     $conn = new PDO($host_file);
     $polls = retrieve_polls();
