@@ -20,7 +20,7 @@ class Poll {
         $votes = 0;
 
         if (!empty($this->answers)) {
-            foreach($answers as $answer) {
+            foreach($this->answers as $answer) {
                 $votes += $answer->votes;
             }
         }
