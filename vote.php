@@ -18,7 +18,7 @@ if (isset($current_poll)) {
     }
 
     if (isset($stored_answer)) {
-        $stored_answer->value += 1;
+        $stored_answer->votes += 1;
     }
 } else {
     die("no poll found!");
