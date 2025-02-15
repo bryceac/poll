@@ -53,7 +53,7 @@ function current_poll() {
     return $poll;
 }
 
-function poll_with_id($id) {
+function retrieve_poll_with_id($id) {
     $polls = retrieve_polls();
 
     $poll = null;

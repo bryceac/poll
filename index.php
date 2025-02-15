@@ -1,5 +1,5 @@
 <?php include("includes/functions.php"); ?>
-<?php $current_poll = current_poll(); ?>
+<?php $current_poll = isset($_GET["id"]) ? retrieve_poll_with_id($_GET["id"]) : current_poll(); ?>
 <!DOCTYPE html>
 <html>
 <head>
