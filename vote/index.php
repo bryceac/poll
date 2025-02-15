@@ -3,9 +3,7 @@ include("../includes/functions.php");
 
 $vote = $_GET["choice"];
 
-$polls = retrieve_polls();
-
-$current_poll = empty($polls) ? null : $polls[count($polls) -1];
+$current_poll = current_poll();
 
 $stored_answer = NULL;
 
