@@ -49,7 +49,7 @@ function current_poll() {
     $polls = retrieve_polls();
 
     if (!empty($polls)) {
-        $poll = $polls[count(polls) -1];
+        $poll = $polls[count($polls) -1];
     }
 
     return $poll;
