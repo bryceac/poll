@@ -76,7 +76,7 @@ function add_answer_to_store($answer) {
     $polls = retrieve_polls();
     $latest_poll = current_poll();
 
-    $query = "insert into answers (poll_id, answer, votes)";
+    $query = "insert into answers (poll_id, answer, votes) values (?, ?, ?)";
     $statement = $conn->prepare($query);
 
     $statement->execute([$latest_poll->id, $answer->value, $answer->votes]);
