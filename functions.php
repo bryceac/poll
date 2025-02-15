@@ -64,3 +64,13 @@ function add_poll_to_store($poll) {
         add_answer_to_store($answer);
     }
 }
+
+function update_vote_in_database($answer) {
+    $conn = new PDO($host_file);
+    $query = "update answers set votes = ? WHERE id = ?";
+
+    $statement = $conn->prepare($query);
+
+    $statement->execute([$answer->vote, $answer->id]);
+    $conn = null;
+}
