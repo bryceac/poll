@@ -1,4 +1,7 @@
 <?php
+include("answer.php");
+include("poll.php");
+
 class DB {
     private $host = "../assets/polls.db";
 
