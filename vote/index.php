@@ -1,5 +1,5 @@
 <?php
-include("functions.php");
+include("../includes/functions.php");
 
 $vote = $_GET["choice"];
 
