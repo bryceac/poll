@@ -53,6 +53,21 @@ function current_poll() {
     return $poll;
 }
 
+function poll_with_id($id) {
+    $polls = retrieve_polls();
+
+    $poll = null;
+
+    foreach ($polls as $stored_poll) {
+        if ($stored_poll === $id) {
+            $poll = $stored_poll;
+            break;
+        }
+    }
+
+    return $poll;
+}
+
 function add_answer_to_store($answer) {
     $conn = new PDO($host_file);
     $polls = retrieve_polls();
