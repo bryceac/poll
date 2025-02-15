@@ -75,3 +75,22 @@ where you can fill in the question or prompt and options.
 
 Each option will for the poll is to them be listed on its own line.
 
+===Voting===
+
+For users to be able to cast their votes, they would typically enter a URL, 
+with query string like this:
+
+<pre>
+http://example.com/poll/vote?choice=hello
+</pre>
+
+The system works like this, 
+so that it has an easy pattern to associate with bots like Nightbot,
+as the intention was to use this while live streaming.
+
+As such, it is strongly recommended to use a browser source to display 
+the poll, so that users can see what their options are.
+
+However, as I have yet to do testing with bots, 
+I do not know they will handle the given format.
+
