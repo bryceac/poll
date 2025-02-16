@@ -92,6 +92,15 @@ from being accessible by bots.</p>
 </li>
 </ol>
 
+===Version History===
+
+<dl>
+<dt style="font-weight:bold">1.0</dt>
+<dd>
+<p>initial release.</p>
+</dd>
+</dl>
+
 ===Creating Polls===
 
 To create a poll, you would visit an address like this:
