@@ -9,7 +9,10 @@ $db = new DB();
 <head>
     <title><?php echo htmlspecialchars($current_poll->question); ?></title>
     <link rel="stylesheet" href="assets/style.css" media="all">
-    <meta http-equiv="refresh" content="5">
+    
+    <?php if ($current_poll->is_open) { ?>
+        <meta http-equiv="refresh" content="5">
+    <?php } ?>
 </head>
 <body>
     <?php if (isset($current_poll)) { ?>
@@ -31,8 +34,10 @@ $db = new DB();
                 <?php } ?>
             <?php } ?>
 
-            <p>To vote, type your vote in this format:</p>
-            <p>!vote <em>choice</em></p>
+            <?php if ($current_poll->is_open) { ?>
+                <p>To vote, type your vote in this format:</p>
+                <p>!vote <em>choice</em></p>
+            <?php } ?>
         </div>
     <?php } else { ?>
         <p>Sorry, There are no polls to display at this time.</p>
