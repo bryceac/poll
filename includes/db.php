@@ -36,7 +36,7 @@ class DB {
         $polls = [];
         
         $conn = $this->connect();
-        $query = "select id, question FROM polls";
+        $query = "select id, question, open FROM polls";
         foreach ($conn->query($query) as $row) {
             $poll = new Poll($row);
     
