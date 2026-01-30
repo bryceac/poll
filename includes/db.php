@@ -87,7 +87,6 @@ class DB {
     }
     
     function add_poll_to_store($poll) {
-        global $db;
         $conn = $this->connect();
     
         $query = "insert into polls (question) values (?)";
