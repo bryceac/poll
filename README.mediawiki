@@ -104,6 +104,7 @@ from being accessible by bots.</p>
 <dt style="font-weight:bold">1.0</dt>
 <dd>
 <p>initial release.</p>
+<p>Released Feb. 2025</p>
 </dd>
 </dl>
 
@@ -118,7 +119,7 @@ http://example.com/poll/create
 This will display a form, 
 where you can fill in the question or prompt and options.
 
-Each option will for the poll is to them be listed on its own line.
+Each option will for the poll is to then be listed on its own line.
 
 ===Voting===
 
@@ -143,6 +144,26 @@ The votes cast will be checked against available response
 and will only be accepted if it is valid.
 
 The votes themselves are case insensitive.
+
+===Closing Poll===
+
+To close a poll, you would enter a URL like this:
+
+<pre>
+http://example.com/poll/close
+</pre>
+
+This will close the currently running poll.
+
+You can also close any other running poll by using a URL like this:
+
+<pre>
+http://example.com/poll/close?id=1
+</pre>
+
+The <strong>id</strong> parameter 
+used is also present on the main page that displays polls,
+so it can also be used used to view certain polls.
 
 ===Contributing===
 
