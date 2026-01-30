@@ -100,6 +100,7 @@ from being accessible by bots.</p>
 <dt style="font-weight:bold">1.1</dt>
 <dd>
 <p>add ability to close polls.</p>
+<p>Released January 30, 2026</p>
 </dd>
 <dt style="font-weight:bold">1.0</dt>
 <dd>
