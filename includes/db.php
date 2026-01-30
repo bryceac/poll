@@ -108,5 +108,17 @@ class DB {
     
         $statement->execute([$answer->votes, $answer->id]);
     }
+
+    function close_poll($poll) {
+        $conn = $this->connect();
+
+        $query = "update polls set open = ? WHERE id = ?";
+
+        $statement = $conn->prepare($query);
+
+        $is_open = "N";
+
+        $statement->execute([$is_open, $poll->id]);
+    }
 }
 ?>
