@@ -2,7 +2,7 @@
 
 <dl>
 <dt style="font-weight:bold">Version</dt>
-<dd><p>1.0</p></dd>
+<dd><p>1.1</p></dd>
 
 <dt style="font-weight:bold">Author</dt>
 <dd><p>Bryce Campbell</p></dd>
@@ -43,7 +43,7 @@ and the DirectoryIndex is set for both <strong>index.html</strong> and
 <a href="https://www.livereacting.com/poll-in-live-stream">LiveReacting</a>, 
 many of them cost money or were more suited to engagement on websites than what I needed.</p>
 <p>Plus, I thought it would be nice to challenge myself 
-at creating a polling system for that can just be linked up 
+at creating a polling system for that that can just be linked up 
 to bots that are already part of streams, such as Nightbot.</p>
 </dd>
 </dl>
@@ -64,13 +64,15 @@ so viewers can see it.</p>
 <dl>
 <dt style="font-weight:bold">Can I have polls automatically close?</dt>
 <dd>
-<p>While I have thought of this, 
-the database structure does not support it 
-because I wanted something simple.</p>
+<p>While it is possible to close polls as of version 1.1, 
+automatic closing itself is not possible within these scripts, 
+to keep things simple.</p>
 <p>Also, some bots, such as Nightbot, 
 have cooldown periods for commands, so taking those into account can be
 difficult.</p>
-<p>However, you are free to help implement it if you would like.</p>
+<p>However, 
+if you would like to have your poll close automatically,
+you can check the documentation for your OS to have it ping the appropriate address.</p>
 </dd>
 </dl>
 </li>
@@ -83,7 +85,7 @@ difficult.</p>
 be using it on each instance.</p>
 <p>While this does have some possible security risks, 
 hence the reason it is not recommended to share instances, 
-it was done for easy of use and convenience.</p>
+it was done for ease of use and convenience.</p>
 <p>To help with security, 
 be sure to exclude the location you install these script 
 from being accessible by bots.</p>
@@ -95,6 +97,10 @@ from being accessible by bots.</p>
 ===Version History===
 
 <dl>
+<dt style="font-weight:bold">1.1</dt>
+<dd>
+<p>add ability to close polls.</p>
+</dd>
 <dt style="font-weight:bold">1.0</dt>
 <dd>
 <p>initial release.</p>
