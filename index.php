@@ -10,7 +10,7 @@ $db = new DB();
     <title><?php echo htmlspecialchars($current_poll->question); ?></title>
     <link rel="stylesheet" href="assets/style.css" media="all">
     
-    <?php if ($current_poll->is_open) { ?>
+    <?php if (isset($current_poll) && $current_poll->is_open) { ?>
         <meta http-equiv="refresh" content="5">
     <?php } ?>
 </head>
