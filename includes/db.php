@@ -89,11 +89,13 @@ class DB {
     function add_poll_to_store($poll) {
         $conn = $this->connect();
     
-        $query = "insert into polls (question) values (?)";
+        $query = "insert into polls (question, open) values (?, ?)";
     
         $statement = $conn->prepare($query);
+
+        $is_open = $poll->is_open ? "Y" : "N";
     
-        $statement->execute([$poll->question]);
+        $statement->execute([$poll->question, $is_open]);
     
         foreach($poll->answers as $answer) {
             $this->add_answer_to_store($answer);
